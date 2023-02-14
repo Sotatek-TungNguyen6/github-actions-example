@@ -48,6 +48,7 @@ jobs:
             AAAEDjsZqUggAsJ+/iOTkJLarjD8NvKqR+eMYC/PG2P+r3AmZzAMtoYzygnVBqRKquWmBU
             3EkL5b2OSFK3ccZIf6XuAAAAGHR1bmcubmd1eWVuNkBzb3RhdGVrLmNvbQECAwQF
             -----END OPENSSH PRIVATE KEY-----
+          port: 22
           script:
             cd /home/sotatek/
             git clone https://github.com/Sotatek-TungNguyen6/github-actions-example.git
