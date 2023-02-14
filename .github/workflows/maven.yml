@@ -46,6 +46,6 @@ jobs:
             cd /home/sotatek/
             git clone https://github.com/Sotatek-TungNguyen6/github-actions-example.git
             cd github-actions-example
-            echo "Okela"
+#            echo "Okela"
 #      - name: deploy
 #        run:  docker-compose -f docker-compose.yaml up -d && exit
