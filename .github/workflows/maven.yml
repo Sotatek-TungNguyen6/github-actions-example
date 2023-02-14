@@ -41,10 +41,11 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script:
-            cd /home/sotatek/
-            git clone https://github.com/Sotatek-TungNguyen6/github-actions-example.git
-            cd github-actions-example
+          script: |
+            ls -ln
+#            cd /home/sotatek/
+#            git clone https://github.com/Sotatek-TungNguyen6/github-actions-example.git
+#            cd github-actions-example
 #            echo "Okela"
 #      - name: deploy
 #        run:  docker-compose -f docker-compose.yaml up -d && exit
