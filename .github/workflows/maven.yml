@@ -40,14 +40,7 @@ jobs:
         with:
           host: 172.16.1.230
           username: sotatek
-          key:
-            -----BEGIN OPENSSH PRIVATE KEY-----
-            b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
-            QyNTUxOQAAACBmcwDLaGM8oJ1QakSqrlpgVNxJC+W9jkhSt3HGSH+l7gAAAKCk+98ZpPvf
-            GQAAAAtzc2gtZWQyNTUxOQAAACBmcwDLaGM8oJ1QakSqrlpgVNxJC+W9jkhSt3HGSH+l7g
-            AAAEDjsZqUggAsJ+/iOTkJLarjD8NvKqR+eMYC/PG2P+r3AmZzAMtoYzygnVBqRKquWmBU
-            3EkL5b2OSFK3ccZIf6XuAAAAGHR1bmcubmd1eWVuNkBzb3RhdGVrLmNvbQECAwQF
-            -----END OPENSSH PRIVATE KEY-----
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script:
             cd /home/sotatek/
