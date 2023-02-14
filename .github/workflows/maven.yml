@@ -36,7 +36,7 @@ jobs:
 
     steps:
       - name: executing remote ssh commands using ssh key
-        uses: Sotatek-TungNguyen6/github-actions-example@master
+        uses: actions/checkout@v1
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
