@@ -36,12 +36,11 @@ jobs:
 
     steps:
       - name: executing remote ssh commands using ssh key
-        uses: actions/checkout@v1
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: ${{ secrets.SSH_PORT }}
           script:
             cd /home/sotatek/
             git clone https://github.com/Sotatek-TungNguyen6/github-actions-example.git
