@@ -41,7 +41,7 @@ jobs:
           host: 172.16.1.230
           username: sotatek
           password: ada2022
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+#          key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script:
             cd /home/sotatek/
