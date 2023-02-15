@@ -33,19 +33,16 @@ jobs:
 
     steps:
       - name: Deploy
-        uses: appleboy/ssh-action@v0.1.7
+        uses: appleboy/ssh-action@master
         with:
-          host: 117.4.246.88
-          username: sotatek
-#          password: ada2022
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: 22
+          port: ${{ secrets.SSH_PORT }}
           script: |
-            whoami
-            ls -ln
-#            cd /home/sotatek/
-#            git clone https://github.com/Sotatek-TungNguyen6/github-actions-example.git
-#            cd github-actions-example
-#            echo "Okela"
+            cd /home/sotatek/
+            git clone https://github.com/Sotatek-TungNguyen6/github-actions-example.git
+            cd github-actions-example
+            ln -ls
 #      - name: deploy
 #        run:  docker-compose -f docker-compose.yaml up -d && exit
