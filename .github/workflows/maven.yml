@@ -11,14 +11,11 @@ name: Project github actions
 on:
   push:
     branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
 
 jobs:
   build:
-
+    name: Build
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v1
     - name: Set up JDK 17
@@ -35,13 +32,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: executing remote ssh commands using password
-        uses: appleboy/scp-action@v0.1.7
+      - name: Deploy
+        uses: appleboy/ssh-action@v0.1.7
         with:
           host: 172.16.1.230
           username: sotatek
-          password: ada2022
-#          key: ${{ secrets.SSH_PRIVATE_KEY }}
+#          password: ada2022
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
             whoami
