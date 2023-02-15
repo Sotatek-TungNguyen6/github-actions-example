@@ -36,14 +36,15 @@ jobs:
 
     steps:
       - name: executing remote ssh commands using ssh key
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v0.1.7
         with:
           host: 172.16.1.230
           username: sotatek
-#          password: ada2022
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          password: ada2022
+#          key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
+            whoami
             ls -ln
 #            cd /home/sotatek/
 #            git clone https://github.com/Sotatek-TungNguyen6/github-actions-example.git
