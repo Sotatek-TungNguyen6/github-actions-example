@@ -43,10 +43,11 @@ jobs:
           password: ada2022
 #          key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
-          script:
-            cd /home/sotatek/
-            git clone https://github.com/Sotatek-TungNguyen6/github-actions-example.git
-            cd github-actions-example
-            echo "Okela"
+          script: |
+            ls -ln
+#            cd /home/sotatek/
+#            git clone https://github.com/Sotatek-TungNguyen6/github-actions-example.git
+#            cd github-actions-example
+#            echo "Okela"
 #      - name: deploy
 #        run:  docker-compose -f docker-compose.yaml up -d && exit
